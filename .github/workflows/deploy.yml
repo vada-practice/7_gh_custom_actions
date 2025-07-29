@@ -69,7 +69,7 @@ jobs:
         with:
           name: dist-files
           path: ./dist
-      - name: Output contents
+      - name: Output contents  # added one line as comment
         run: ls
       - name: Deploy site
         run: echo "Deploying..."
