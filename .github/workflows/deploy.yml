@@ -10,7 +10,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Load & Cache Dependencies 
-        uses: vada-practice/7_gh_custom_actions/.github/actions/cached-deps
+        uses: vada-practice/7_gh_custom_actions/.github/actions/cached-deps@main
       - name: Lint code
         run: npm run lint
   test:
