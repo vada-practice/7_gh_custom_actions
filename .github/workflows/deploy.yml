@@ -10,9 +10,12 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Load & Cache Dependencies 
+        id: cache-deps
         uses: vada-practice/7_gh_custom_actions/.github/actions/cached-deps@main
         with:
           caching: 'false'
+      - name: Output Information
+        run: echo "cache used? ${{ steps.cache-deps.outputs.used-cache }}"
       - name: Lint code
         run: npm run lint
   test:
