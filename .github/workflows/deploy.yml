@@ -13,7 +13,7 @@ jobs:
         id: cache-deps
         uses: vada-practice/7_gh_custom_actions/.github/actions/cached-deps@main
         with:
-          caching: 'false'
+          caching: 'true'
       - name: Output Information
         run: echo "cache used? ${{ steps.cache-deps.outputs.used-cache }}"
       - name: Lint code
